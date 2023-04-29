@@ -2,7 +2,8 @@
     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9lbW9udGFsdm8iLCJhIjoiY2xoMWU1amJyMTJmbDNmcDdvaGxwY3F3OSJ9.RFEa3UgfPV3HgPWeKUZMtw';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v12', //mapbox://styles/mapbox/satellite-v9
+        // style: 'mapbox://styles/mapbox/streets-v12', //mapbox://styles/mapbox/satellite-v9
+        style: 'mapbox://styles/mapbox/satellite-v9',
         projection: 'globe',
         center: [-117.645252649553, 33.635858615890065], // starting position [lng, lat]
         zoom: 16, // starting zoom
@@ -111,8 +112,8 @@
                 "source": "radius"+number,
                 "layout": {},
                 "paint": {
-                    "fill-color": "blue",
-                    "fill-opacity": 0.2,
+                    "fill-color": "#FFFFFF",
+                    "fill-opacity": 0.5,
                 }
             });
         });
@@ -156,6 +157,18 @@
             map.setStyle('mapbox://styles/mapbox/streets-v12');
         }
         
+    }
+
+    var handleResize = function(){
+        let new_radius = document.getElementById("t_dist").value;
+        transformers.forEach(({number, latLon}) => {
+        
+            const tempSource = map.getSource("radius"+number);
+
+            console.log(tempSource);
+            let newCoords = createGeoJSONCircle(latLon, new_radius*0.000305).data.features[0].geometry.coordinates[0];
+            tempSource.setData(createGeoJSONCircle(latLon, new_radius*0.000305).data);
+        })
     }
     
 

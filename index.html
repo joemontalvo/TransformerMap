@@ -14,9 +14,9 @@
 				position: absolute;
 				padding: 16px;
 				background-color: rgb(255, 255, 255);
-				border-radius: 5px;
+				border-radius: 10px;
 				top: 100px;
-				left: 50px;
+				left: 25px;
 				width: 350px;
 			}
 			#t_dist{
@@ -43,24 +43,31 @@
 		<div id="tray">
 			<h2>Map Controls</h2>
 			<div class="form">
-				<div class="form_block">
+				<!-- <div class="form_block">
 					<label for="m_style">Satellite View:</label>
 					<input type="checkbox" id="m_style"name="m_style" onchange="toggleStyle();">
-				</div>
+				</div> -->
 				<div class="form_block">
 					<label for="t_vis">Show transformers:</label>
-					<input type="checkbox" id="t_vis"name="t_vis" onchange="toggleTrans();"checked >
+					<input type="checkbox" id="t_vis"name="t_vis" onchange="toggleTrans();"checked/>
 				</div>
 				<div class="form_block">
 					<label for="t_rad_vis">Show radius:</label>
-					<input type="checkbox" id="t_rad_vis"name="t_rad_vis" onchange="toggleRadius();"checked >
+					<input type="checkbox" id="t_rad_vis"name="t_rad_vis" onchange="toggleRadius();"checked/>
 				</div>
 				<div class="form_block">
 					<label for="t_dist">Distance from Transformer:</label>
-					<input type="text" id="t_dist"name="t_dist">
+					<input
+						type="text"
+						id="t_dist"
+						name="t_dist"
+						onchange   = "handleResize();"
+						onkeypress = "this.onchange();"
+						onpaste    = "this.onchange();"
+						oninput    = "this.onchange();"
+					/>
 					ft.
 				</div>
-				<button type="button">Submit!</button>
 			</div>
 
 		</div>
