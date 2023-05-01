@@ -60,7 +60,7 @@
             latLon:[33.63441038818917, -117.64462114206243]
         },
         {
-            number:"514907",
+            number:"5142907",
             latLon:[33.63475108814483, -117.64367540258584]
         },
         {
@@ -128,7 +128,7 @@
             latLon:[33.63655041994123, -117.64598228490539]
         },
         {
-            number:"####",
+            number:"B5142934",
             latLon:[33.63619559766021, -117.64556258552807]
         },
         {
@@ -184,15 +184,15 @@
         });
 
         transformers.forEach(({number, latLon}) => {
-            const popup = new mapboxgl.Popup({ offset: 25}). setText (
-                'Transformer '+number
-            );
+            const popup = new mapboxgl.Popup({ offset: 25})
+                //.setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="/Users/joseph/Desktop/Map-layers-master/Images/'+number+'.jpeg" width=100%></p>');
+                .setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="Images/'+number+'.jpeg" width=100%></p>');
             new mapboxgl.Marker({color: "#228B22", scale: 0.8})
                 .setLngLat(latLon.reverse())
                 .setPopup(popup)
                 .addTo(map);
             
-            map.addSource("radius"+number, createGeoJSONCircle(latLon, 0.06096));//radius in km
+            map.addSource("radius"+number, createGeoJSONCircle(latLon, 100*0.0003048));//radius in km
             
             map.addLayer({
                 "id": "radius"+number,
@@ -260,4 +260,4 @@
     }
     
 
-            
+// https://community.spiceworks.com/topic/2097795-add-images-to-interactive-point-markers-within-mapbox
