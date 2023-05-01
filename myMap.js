@@ -56,7 +56,7 @@
 
     const transformers = [
         {
-            number:"B514905",
+            number:"B5142688",
             latLon:[33.63441038818917, -117.64462114206243]
         },
         {
@@ -150,6 +150,10 @@
         {
             number:"5142748",
             latLon:[33.633741156441985, -117.6457147955581]
+        },
+        {
+            number:"5142906",
+            latLon:[33.634079015834644, -117.6438108604844]
         }
 
     ]
@@ -186,7 +190,7 @@
         transformers.forEach(({number, latLon}) => {
             const popup = new mapboxgl.Popup({ offset: 25})
                 //.setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="/Users/joseph/Desktop/Map-layers-master/Images/'+number+'.jpeg" width=100%></p>');
-                .setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="Images/'+number+'.jpeg" width=100%></p>');
+                .setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="https://github.com/joemontalvo/TransformerMap/blob/main/Images/'+number+'.jpeg?raw=false" width=100%></p>');
             new mapboxgl.Marker({color: "#228B22", scale: 0.8})
                 .setLngLat(latLon.reverse())
                 .setPopup(popup)
