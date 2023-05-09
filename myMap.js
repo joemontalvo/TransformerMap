@@ -3,6 +3,7 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         // style: 'mapbox://styles/mapbox/streets-v12', //mapbox://styles/mapbox/satellite-v9
+        // style: 'mapbox://styles/joemontalvo/clh6f0w3b00ak01q12rlu9zmd',
         style: 'mapbox://styles/mapbox/satellite-v9',
         projection: 'globe',
         center: [-117.645252649553, 33.635858615890065], // starting position [lng, lat]
@@ -53,113 +54,39 @@
     };
 		
 
-
+    
     const transformers = [
-        {
-            number:"B5142688",
-            latLon:[33.63441038818917, -117.64462114206243]
-        },
-        {
-            number:"5142907",
-            latLon:[33.63475108814483, -117.64367540258584]
-        },
-        {
-            number:"5142905",
-            latLon:[33.633835032249856, -117.64449754985816]
-        },
-        {
-            number:"5142908",
-            latLon:[33.6355426453007, -117.64351628216976]
-        },
-        {
-            number:"5142940",
-            latLon:[33.636139223632085, -117.64276817299897]
-        },
-        {
-            number:"5142939",
-            latLon:[33.636295282929815, -117.64369513705611]
-        },
-        {
-            number:"B5143132",
-            latLon:[33.63527952085698, -117.64413361055328]
-        },
-        {
-            number:"B5142828",
-            latLon:[33.63551188928903, -117.64455838093063]
-        },
-        {
-            number:"5142938",
-            latLon:[33.63665771573886, -117.64395904430616]
-        },
-        {
-            number:"B5142829",
-            latLon:[33.636146716049, -117.64483228754317]
-        },
-        {
-            number:"5143125",
-            latLon:[33.63697166297778, -117.64446814961293]
-        },
-        {
-            number:"B5143127",
-            latLon:[33.63865818054006, -117.64433609250916]
-        },
-        {
-            number:"5143128",
-            latLon:[33.639437726400885, -117.64478910899167]
-        },
-        {
-            number:"5123122",
-            latLon:[33.638145987392114, -117.6450829038173]
-        },
-        {
-            number:"5123124",
-            latLon:[33.63848009183568, -117.64560222405348]
-        },
-        {
-            number:"B5123123",
-            latLon:[33.639070709775474, -117.64491601765556]
-        },
-        {
-            number:"B5142937",
-            latLon:[33.637487669221336, -117.64533942313363]
-        },
-        {
-            number:"5142935",
-            latLon:[33.63655041994123, -117.64598228490539]
-        },
-        {
-            number:"B5142934",
-            latLon:[33.63619559766021, -117.64556258552807]
-        },
-        {
-            number:"5142933",
-            latLon:[33.635614783447934, -117.64580957437335]
-        },
-        {
-            number:"5142826",
-            latLon:[33.635173195126114, -117.64614690636783]
-        },
-        {
-            number:"B5142751",
-            latLon:[33.634617112473215, -117.64610627797938]
-        },
-        {
-            number:"5142750",
-            latLon:[33.63420950483756, -117.64674658255883]
-        },
-        {
-            number:"5142748",
-            latLon:[33.633741156441985, -117.6457147955581]
-        },
-        {
-            number:"5142906",
-            latLon:[33.634079015834644, -117.6438108604844]
-        }
-
-    ]
+        { number:"B5142688", latLon:[33.63441038818917, -117.64462114206243] },
+        { number:"5142907", latLon:[33.63475108814483, -117.64367540258584] },
+        { number:"5142905", latLon:[33.633835032249856, -117.64449754985816] },
+        { number:"5142908", latLon:[33.6355426453007, -117.64351628216976] },
+        { number:"5142940", latLon:[33.636139223632085, -117.64276817299897] },
+        { number:"5142939", latLon:[33.636295282929815, -117.64369513705611] },
+        { number:"B5143132", latLon:[33.63527952085698, -117.64413361055328] },
+        { number:"B5142828", latLon:[33.63551188928903, -117.64455838093063] },
+        { number:"5142938", latLon:[33.63665771573886, -117.64395904430616] },
+        { number:"B5142829", latLon:[33.636146716049, -117.64483228754317] },
+        { number:"5143125", latLon:[33.63697166297778, -117.64446814961293] },
+        { number:"B5143127", latLon:[33.63865818054006, -117.64433609250916] },
+        { number:"5143128", latLon:[33.639437726400885, -117.64478910899167] },
+        { number:"5123122", latLon:[33.638145987392114, -117.6450829038173] },
+        { number:"5123124", latLon:[33.63848009183568, -117.64560222405348] },
+        { number:"B5123123", latLon:[33.639070709775474, -117.64491601765556] },
+        { number:"B5142937", latLon:[33.637487669221336, -117.64533942313363] },
+        { number:"5142935", latLon:[33.63655041994123, -117.64598228490539] },
+        { number:"B5142934", latLon:[33.63619559766021, -117.64556258552807] },
+        { number:"5142933", latLon:[33.635614783447934, -117.64580957437335] },
+        { number:"5142826", latLon:[33.635173195126114, -117.64614690636783]},
+        { number:"B5142751", latLon:[33.634617112473215, -117.64610627797938] },
+        { number:"5142750", latLon:[33.63420950483756, -117.64674658255883] },
+        { number:"5142748", latLon:[33.633741156441985, -117.6457147955581] },
+        { number:"5142906", latLon:[33.634079015834644, -117.6438108604844] }
+    ];
 
 
+    
     map.on('load', ()=>{
+
 
         map.addSource('border', {
             type: 'geojson',
@@ -186,15 +113,32 @@
                 'line-width':5
             }
         });
+        document.getElementById('map').addEventListener('click', (e) => {
+            if (e.defaultPrevented === false) {
+                const tray_image_container =  document.getElementById("tray_image_container");
+                tray_image_container.innerHTML = '';
+            }
+        });
+
+
 
         transformers.forEach(({number, latLon}) => {
             const popup = new mapboxgl.Popup({ offset: 25})
                 //.setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="/Users/joseph/Desktop/Map-layers-master/Images/'+number+'.jpeg" width=100%></p>');
-                .setHTML('<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="https://github.com/joemontalvo/TransformerMap/blob/main/Images/'+number+'.jpeg?raw=false" width=100%></p>');
-            new mapboxgl.Marker({color: "#228B22", scale: 0.8})
+                .setHTML('<h4 style="text-align: center;">Transformer: '+number+'</h4>');
+            var marker = new mapboxgl.Marker({color: "#228B22", scale: 0.8})
                 .setLngLat(latLon.reverse())
                 .setPopup(popup)
                 .addTo(map);
+
+            marker.getElement().addEventListener('click', (e) => {
+                e.preventDefault();
+                const tray_image_container =  document.getElementById("tray_image_container");
+                tray_image_container.innerHTML = '';
+                const image = document.createElement('div');
+                image.innerHTML = '<h2 style="text-align: center;">Transformer: '+number+'</h2><p style="width:100%;"><img src="https://github.com/joemontalvo/TransformerMap/blob/main/Images/'+number+'.jpeg?raw=false" width=100%></p>';
+                tray_image_container.appendChild(image);
+            });
             
             map.addSource("radius"+number, createGeoJSONCircle(latLon, 100*0.0003048));//radius in km
             
@@ -209,6 +153,7 @@
                 }
             });
         });
+
         
 
     });
@@ -265,3 +210,22 @@
     
 
 // https://community.spiceworks.com/topic/2097795-add-images-to-interactive-point-markers-within-mapbox
+
+function createGeoJSON(arr) {
+    const features = arr.map(obj => {
+      const [longitude, latitude] = obj.latLon;
+      return {
+        type: 'Feature',
+        properties: { number: obj.number },
+        geometry: {
+          type: 'Point',
+          coordinates: [longitude, latitude]
+        }
+      };
+    });
+  
+    return {
+      type: 'FeatureCollection',
+      features: features
+    };
+}
