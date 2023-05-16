@@ -33,9 +33,16 @@
 			h2 {
     			text-align:center;
 			}
-			/* .mapboxgl-popup-content{
-				width: 250px;
-			} */
+			.custom-marker-xfmr {
+				width: 35px;
+				height: 35px;
+				top: -17.5px;
+			}
+			.custom-marker-parking {
+				width: 15px;
+				height: 15px;
+				top: -7.5px;
+			}
 		</style>
 		
 	</head>
@@ -43,20 +50,25 @@
 	<body>
 
 		<div id="map"></div>
+
 		<div id="tray">
 			<h2>Map Controls</h2>
 			<div class="form">
-				<!-- <div class="form_block">
-					<label for="m_style">Satellite View:</label>
-					<input type="checkbox" id="m_style"name="m_style" onchange="toggleStyle();">
-				</div> -->
 				<div class="form_block">
-					<label for="t_vis">Show transformers:</label>
-					<input type="checkbox" id="t_vis"name="t_vis" onchange="toggleTrans();"checked/>
+					<label for="t_vis">Show all transformers:</label>
+					<input type="checkbox" id="t_vis"name="t_vis" onchange="toggleXfmr();"checked/>
 				</div>
 				<div class="form_block">
+					<label for="t_i_vis">Show Ideal transformers:</label>
+					<input type="checkbox" id="t_i_vis"name="t_i_vis" onchange="toggleIdealXfmr();"/>
+				</div>
+				<div class="form_block" hidden>
 					<label for="t_rad_vis">Show radius:</label>
-					<input type="checkbox" id="t_rad_vis"name="t_rad_vis" onchange="toggleRadius();"checked/>
+					<input type="checkbox" id="t_rad_vis"name="t_rad_vis" onchange="toggleRadius();"/>
+				</div>
+				<div class="form_block">
+					<label for="t_all_rad_vis">Show all radius:</label>
+					<input type="checkbox" id="t_all_rad_vis"name="t_all_rad_vis" onchange="toggleAllRadius();"/>
 				</div>
 				<div class="form_block">
 					<label for="t_dist">Distance from Transformer:</label>
