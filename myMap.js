@@ -84,15 +84,12 @@
     const parking = [
         { number: "P1", latLon: [33.6343006822913, -117.6448207338796] },
         { number: "P2", latLon: [33.63536235526366, -117.64359312078709] },
-        { number: "P3", latLon: [33.636219221234875, -117.644793319939] },
-        { number: "P4", latLon: [33.63734282330024, -117.64554190098897] },
-        // { number: "P4B", latLon: [33.63745801964544, -117.64536162905198] },
-        { number: "P5", latLon: [33.63892658564588, -117.64421120301517] },
-        { number: "P6", latLon: [33.634755735913494, -117.6461756823058] }
-
+        { number: "P3", latLon: [33.63734282330024, -117.64554190098897] },
+        { number: "P4", latLon: [33.63892658564588, -117.64421120301517] },
+        { number: "P5", latLon: [33.634755735913494, -117.6461756823058] },
+        { number: "P6", latLon: [33.63712447284956, -117.64442909356421] },
+        { number: "P7", latLon: [33.63617605957976, -117.64609886904323] }
     ];
-
-
 
 
 
@@ -187,21 +184,6 @@
             var marker = new mapboxgl.Marker(markerElement)
                 .setLngLat(latLon.reverse())
                 .addTo(map);
-
-
-            //click listener for marker
-            // marker.getElement().addEventListener('click', (e) => {
-            //     e.preventDefault();
-               
-            //     resetMarkers();
-
-            //     marker.getElement().src = "https://github.com/joemontalvo/TransformerMap/blob/aebe9a655697a8d8ac806a5b8355265dbefa4eac/Images/Pins/Pin-Red.png?raw=false"
-
-            //     showCheckbox(number);
-
-            //     setImage(number);
-
-            // });
 
         });
 
