@@ -55,20 +55,28 @@
 			<h2>Map Controls</h2>
 			<div class="form">
 				<div class="form_block">
-					<label for="t_vis">Show all transformers:</label>
-					<input type="checkbox" id="t_vis"name="t_vis" onchange="toggleXfmr();"checked/>
+					<label for="t_i_vis">Show Ideal transformers:</label>
+					<input type="checkbox" id="t_i_vis"name="t_i_vis" onchange = "toggleXfmrView()"/> 
 				</div>
 				<div class="form_block">
-					<label for="t_i_vis">Show Ideal transformers:</label>
-					<input type="checkbox" id="t_i_vis"name="t_i_vis" onchange="toggleIdealXfmr();"/>
+					<label for="option1">Good</label>
+					<input type="radio" id="t1" name="radioGroup" value="1" onchange = "toggleXfmrView()">
+
+					<label for="option2">Better</label>
+					<input type="radio" id="t2" name="radioGroup" value="2" onchange = "toggleXfmrView()">
+
+					<label for="option3">Best</label>
+					<input type="radio" id="t3" name="radioGroup" value="3" checked onchange = "toggleXfmrView()">
 				</div>
+
+
 				<div class="form_block" hidden>
 					<label for="t_rad_vis">Show radius:</label>
 					<input type="checkbox" id="t_rad_vis"name="t_rad_vis" onchange="toggleRadius();"/>
 				</div>
 				<div class="form_block">
-					<label for="t_all_rad_vis">Show all radius:</label>
-					<input type="checkbox" id="t_all_rad_vis"name="t_all_rad_vis" onchange="toggleAllRadius();"/>
+					<label for="all_rad_vis">Show all radius:</label>
+					<input type="checkbox" id="all_rad_vis"name="all_rad_vis" onchange="toggleAllRadius();"/>
 				</div>
 				<div class="form_block">
 					<label for="t_dist">Distance from Transformer:</label>
@@ -88,9 +96,8 @@
 
 		</div>
 		
-		
-
 		<script src="myMap.js"></script>
  
 	</body>
 </html>
+
